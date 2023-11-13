@@ -1,4 +1,31 @@
 class BaseVehicle:
+    """
+    This is a base class to create a general definition of a vehicle.
+    
+    Arguments
+    ---------
+    name : str, default="vehicle"
+        Name of the vehicle being defined.
+        
+    year : int, default=2023
+        Year the vehicle was built.
+    
+    kms : [int, float], default=0
+        Number of kms this vehicle has driven for.
+        
+    fuel : str, default="gas"
+        Type of fuel used in the vehicle.
+    
+    (...)
+    
+    Attributes
+    ----------
+    wheel_count : NoneType
+        Number of wheels in the vehicle
+    
+    can_park_indoors (...)
+    (...)
+    """
     
     wheel_count = None
     parked_days = 0
@@ -6,9 +33,6 @@ class BaseVehicle:
     cleaning_cost = 0
     
     def __init__(self, name, year, kms, fuel, color, state, quality, size):  
-        # This is the constructor
-        # __init__ is a special method (notice the two underscores)
-        # 'self' refers to an instantiated object of the class
         self.name = name 
         self.year = year 
         self.kms = kms 
@@ -21,6 +45,18 @@ class BaseVehicle:
         self.can_park_indoors = self.fuel != "GPL"
         
     def drive(self, kms):
+        """
+        Increment kms to the vehicle.
+        
+        Parameters
+        ----------
+        kms : [int, float]
+            Number of kms to increment.
+            
+        Returns
+        -------
+        self
+        """
         # The two lines below amount to the same result
         # self.kms += kms
         # self.kms = self.kms + kms
@@ -28,7 +64,10 @@ class BaseVehicle:
         return self
     
     def get_parking_cost(self, indoors=True):
-        
+        """
+        (...)
+        """
+
         # Daily parking cost according to different specifications
         cost_quality = {"low": 2, "medium": 3, "high": 4}
         cost_size = {"small": 2, "large": 4}
@@ -74,7 +113,33 @@ class BaseVehicle:
 
 
 class Car(BaseVehicle):
+    """
+    Creates a Car object with 4 wheels.
     
+    Arguments
+    ---------
+    name : str, default="vehicle"
+        Name of the vehicle being defined.
+        
+    year : int, default=2023
+        Year the vehicle was built.
+    
+    kms : [int, float], default=0
+        Number of kms this vehicle has driven for.
+        
+    fuel : str, default="gas"
+        Type of fuel used in the vehicle.
+    
+    (...)
+    
+    Attributes
+    ----------
+    wheel_count : NoneType
+        Number of wheels in the vehicle
+    
+    can_park_indoors (...)
+    (...)
+    """
     wheel_count = 4
 
     def wash_inside(self):
