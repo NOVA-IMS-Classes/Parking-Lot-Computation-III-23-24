@@ -9,6 +9,10 @@ You can simply install ``parking_lot`` by running the following command:
 pip install git+https://github.com/joaopfonseca/fictional-waffle.git
 ```
 
+## Incomplete UML diagram
+
+[uml-diagram](assets/uml-diagram.png)
+
 ## Usage Instructions
 
 **This is boldfaced text**, _this is italic text_
