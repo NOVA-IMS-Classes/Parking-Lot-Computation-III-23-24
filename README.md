@@ -15,3 +15,11 @@ pip install git+https://github.com/joaopfonseca/fictional-waffle.git
 
 Run the script ``main.py``: ``python main.py``
 
+## Goals for Lecture 13
+
+- Set up exceptions
+- Implement Parking Lot class
+- Add tests for vehicles classes
+- Set up simple example notebook
+- Rename repo
+- Add tags/releases for Lectures 11, 12 and 13
