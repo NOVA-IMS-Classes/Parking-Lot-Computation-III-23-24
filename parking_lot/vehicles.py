@@ -85,8 +85,8 @@ class BaseVehicle:
     def park_vehicle(self, indoors=True):
 
         if indoors and (not self.can_park_indoors):
-            print("The car cannot park indoors!")
-            return self
+            msg = f"The {self} cannot park indoors" " because fuel type is GPL!"
+            raise TypeError(msg)
 
         if not self.is_parked:
             self.drive(0.1)

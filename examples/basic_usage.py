@@ -35,6 +35,14 @@ cars_info = [
 
 cars = [Car(**car) for car in cars_info]
 
+for car in cars:
+    try:
+        car.park_vehicle(indoors=True)
+        print(f"{car} was parked indoors.")
+    except TypeError:
+        print(f"{car} cannot park indoors. Exception handled.")
+
+
 cool_car = cars[0]
 
 cool_car.parked_days
